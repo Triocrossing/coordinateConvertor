@@ -15,11 +15,14 @@ Q0: PREVIOUS quaternion vector:
 Q0 = Quaternion[x=q0, y=q1, z=q2, w=q3]
 Q1: CURRENT quaternion vector:
 Q1 = Quaternion[x=q0, y=q1, z=q2, w=q3]
+
+return:
+rT1, rq1: RELATIVE pose by taking t0 and Q0 as origin
 '''
 
 def world2Relative(t0, t1, Q0, Q1):
 
-    assert(np.shape(t0)==np.shape(t1)==(3,1))
+    assert(np.shape(t0)==np.shape(t1)==(3,))
 
     # Exploit the pyquaternion for representation of quaternion
     q0 = Quaternion(Q0)
