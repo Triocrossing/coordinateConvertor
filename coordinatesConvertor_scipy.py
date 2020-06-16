@@ -94,10 +94,10 @@ class CoordType(Enum):
   UE      = 4
 
 # precomputed transform matrices
-s_M_opgl = np.matrix([[1,0,0],[0,-1,0],[0,0,-1]])
-s_M_u3d  = np.matrix([[1,0,0],[0,-1,0],[0,0,1]]) 
-s_M_fd   = np.matrix([[1,0,0],[0,0,1],[0,-1,0]]) 
-s_M_ue   = np.matrix([[0,0,1],[1,0,0],[0,-1,0]]) 
+s_M_opgl = np.transpose(np.matrix([[1,0,0],[0,-1,0],[0,0,-1]]))
+s_M_u3d  = np.transpose(np.matrix([[1,0,0],[0,-1,0],[0,0,1]]))
+s_M_fd   = np.transpose(np.matrix([[1,0,0],[0,0,1],[0,-1,0]]))
+s_M_ue   = np.transpose(np.matrix([[0,0,1],[1,0,0],[0,-1,0]]))
 
 class coordCvtor():
 
